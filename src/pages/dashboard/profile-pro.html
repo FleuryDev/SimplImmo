@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SimplImmo</title>
+    <link rel="stylesheet" href="./dist/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/dist/aos/aos.css">
+    <link rel="stylesheet" href="/dist/main.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="shortcut icon" href="/img/logo.png" style="width: 500%;" type="image/x-icon">
+    <link rel="stylesheet" href="/src/fonts/font-awesome/css/font-awesome.css">
+
+    <!-- <link rel="stylesheet" href="/node_modules/boxicons/css/boxicons.min.css"> -->
+</head>
+
+<body class="">
+    <header data-role="header" class="fixed top-0 w-full md:px-6 bg-white" style="z-index: 4567890000;">
+        <div class="flex justify-between w-full p-2 mx-auto shadow lg:w-4/5 ">
+            <div class="flex justify-between w-full border rounded div-first border-gray-50">
+
+                <a href=""><img src="/img/logo.png" class="md:w-44 sm:w-60" alt=""></a>
+                <div class="justify-between hidden w-auto my-auto immo-link md:flex">
+                    <a href="../index.html" class="p-2 "> Accueil
+                        <hr>
+                    </a>
+                    <a href="../about.html" class="p-2 ">A propos
+                        <hr>
+                    </a>
+                    <a href="../blog.html" class="p-2 ">Blog
+                        <hr>
+                    </a>
+                    <a href="../contact.html" class="p-2">Contact
+                        <hr>
+                    </a>
+                </div>
+                <div class="justify-between hidden my-auto mr-4 md:flex">
+                    <a href="login.html" class="mr-6 my-auto "> <i class="fa fa-bell fa-lg"></i> <span
+                            class="absolute top-3 -ml-2 text-primry text-red-600 rounded-full bg-white border-blue-300 border p-1 text-xs">9+</span></a>
+                    <div
+                        class="mr-3 flex flex-col justify-center align-middle justify-items-center text-sm p-2 my-auto">
+
+                        <a href="profile.html" class="mx-auto"><img src="/img/img2.png" class="w-8 h-8 rounded-full"
+                                alt=""></a>
+                        <span>David</span>
+                    </div>
+                    <div
+                        class="mr-3 flex flex-col text-sm justify-center align-middle justify-items-center p-2 my-auto">
+
+                        <a href="profile.html" class="mx-auto"><img src="/img/img2.png" class="w-8 h-8 rounded-full"
+                                alt=""></a>
+                        <span>ImmoPlus</span>
+                    </div>
+
+                </div>
+                <button data-state="false" class="p-0 mr-3 btn-primary md:hidden"><i
+                        class="fa fa-2x fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="mt-20 flex ">
+        <div class="w-2/12">
+
+            <nav class="border-r  fixed">
+                <ul>
+                    <li class="active">
+                        <a class=" " href=""> <i class="fa fa-user  mx-2"></i>Profil</a>
+                    </li>
+                    <li class="p-2 text-xl"><a href=""> <i class="fa fa-dashboard bg-slate-500 mx-2"></i>Tableau de
+                            bord</a></li>
+                    <li class="p-2 text-xl"><a href=""> <i class="fa fa-clock-o mx-2"></i>Clients en cours</a></li>
+                    <li class="p-2 text-xl flex"><a href="" class="flex"> <i class="fa fa-check-circle mx-2 "></i>
+
+                            Clients
+                            passés
+                        </a>
+                    </li>
+                    <li class="p-2 text-xl"><a href=""> <i class="fa fa-file mx-2"></i>Documents</a></li>
+                    <li class="p-2 text-xl"><a href=""> <i class="fa mx-2 fa-file-archive-o"></i>Factures</a></li>
+                    <li class="p-2 text-xl"><a href=""> <i class="fa fa-dollar mx-2"></i>Fiche client</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class=" px-6  lg:w-8/12  ">
+
+            <section class="flex w-full p-2 ">
+                <div class="container flex flex-col mx-auto">
+
+                    <h1 class="my-5 text-3xl font-extrabold font-alton-bold text-gray-500" style="font-weight: 300;">Mon
+                        profil</h1>
+
+                    <div class="container flex justify-self-center">
+                        <form action="" class="flex flex-wrap w-full justify-between  mx-auto ml-auto " method="post">
+                            <div class="w-full flex flex-col   ">
+
+                                <div class="flex w-full p-3 pb-0 pl-0 my-1 container">
+                                    <div class="w-10/12 flex  container">
+                                        <img src="/img/img2.png" class="w-16 h-16 rounded-full" alt="">
+                                        <div class="bottom-0 flex -ml-3">
+                                            <label for="" class="rounded-full h-min w-min border shadow flex p-1">
+                                                <i class="fa fa-camera"></i>
+                                                <input class="hidden" type="file">
+                                            </label>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                                <div class="flex w-full p-3 pb-0 pl-0 my-1 ">
+                                    <div class="w-10/12 border-b-2 flex border-blue-200">
+                                        <label class="  py-1 w-3/12" for="name">Nom
+                                            d'utilisateur :</label><input class="p-1 pl-3 w-9/12 outline-none "
+                                            placeholder="Mettre à jour le nom d'utilisateur" value="David GRYMBAUM"
+                                            id="name" type="text">
+
+                                    </div>
+
+                                </div>
+                                <div class="flex w-full p-3 pb-0 pl-0 my-1 ">
+                                    <div class="w-10/12 border-b-2 flex border-blue-200">
+                                        <label class=" py-1 w-1/12" for="mail">E-mail:</label><input
+                                            class="p-1 pl-3 outline-none w-10/12"
+                                            placeholder="Mettre à jour l'addresse mail" value="david@grymbaum.fr"
+                                            id="mail" type="email">
+
+                                    </div>
+
+                                </div>
+                                <div class="flex w-full p-3 pb-0 pl-0 my-1 ">
+                                    <div class="w-10/12 border-b-2 flex border-blue-200">
+                                        <label class=" w-1/12   py-1" for="tel">Tel : </label><input
+                                            class="p-1 pl-3 w-11/12 outline-none "
+                                            placeholder="Mettre à jour l'addresse téléphonique" value="+33 000 000 00"
+                                            id="tel" type="tel">
+
+                                    </div>
+
+                                </div>
+                                <div class="flex w-full p-3 pb-0 pl-0 my-1 ">
+                                    <div class="w-10/12 border-b-2 flex border-blue-200">
+                                        <label class=" w-2/12 py-1" for="local">Localisation :</label><input
+                                            class="p-1 pl-3 w-10/12 outline-none "
+                                            placeholder="Mettre à jour votre locatisation"
+                                            value="129 AVENUE DE GENEVE. 74000 HAUTE SAVOIE" id="local" type="text">
+
+                                    </div>
+
+                                </div>
+                                <div class="flex w-full p-3 pb-0 pl-0 my-1 ">
+                                    <div class="w-8/12  flex">
+                                        <label class=" p-1" for="statu">Statu :</label><input
+                                            class="p-1 pl-3 outline-none " disabled
+                                            placeholder="Mettre à jour votre statu" value="Particulier" id="statu"
+                                            type="text">
+
+                                    </div>
+                                    <div class="w-4/12">
+                                        <a href="" class="text-sm  text-primary">Passer en compte Pro</a>
+                                    </div>
+                                </div>
+
+                                <h2 class="text-center mt-3">Mot de passe</h2>
+                                <div class="flex w-full p-3 pb-0 pl-0 my-1 ">
+                                    <div class="w-10/12 border-b-2 flex border-blue-200">
+                                        <label class="bg-blue-200 w-4/12 border p-1" for="pass1">Ancien mot de
+                                            passe</label><input class="p-1 pl-3 w-8/12 outline-none " id="pass1"
+                                            type="password">
+
+                                    </div>
+
+                                </div>
+                                <div class="flex w-full p-3 pb-0 pl-0 my-1 ">
+                                    <div class="w-10/12 border-b-2 flex border-blue-200">
+                                        <label class="bg-blue-200  border p-1 w-4/12" for="pass2">Nouveau mot de
+                                            passe</label><input class="p-1 pl-3 w-8/12 outline-none  " id="pass2"
+                                            type="password">
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="flex flex-col w-full align-baseline h-min">
+                                <button class="mx-auto btn-primary mt-4" style="letter-spacing: 1px;" type="submit">
+                                    &nbsp;
+                                    Mettre à jour mes informations</button>
+
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+            </section>
+            <div class="w-full my-3 mt-16 ">
+                <h3 class="text-2xl font-alton-bold">Rappel de votre parcours d'achat</h3>
+            </div>
+            <div class="flex w-full justify-around">
+                <div class="flex flex-col  p-1 justify-center text-center">
+                    <div
+                        class="text-2xl mx-auto p-2 w-12 my-4 h-12 text-center align-middle border-2 border-blue-300 text-primary font-extrabold rounded-full">
+                        1</div>
+
+                    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+                </div>
+                <div class="flex flex-col p-1 justify-center  text-center">
+                    <div
+                        class="text-2xl mx-auto p-2 w-12 my-4 h-12 text-center align-middle border-2 border-blue-300 text-primary font-extrabold rounded-full">
+                        2</div>
+
+                    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+                </div>
+                <div class="flex flex-col p-1 justify-center text-center">
+                    <div
+                        class="text-2xl mx-auto p-2 w-12 my-4 h-12 text-center align-middle border-2 border-blue-300 text-primary font-extrabold rounded-full">
+                        3</div>
+
+                    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+                </div>
+                <div class="flex flex-col p-1 justify-center text-center">
+                    <div
+                        class="text-2xl mx-auto p-2 w-12 my-4 h-12 text-center align-middle border-2 border-blue-300 text-primary font-extrabold rounded-full">
+                        4</div>
+
+                    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+                </div>
+            </div>
+        </div>
+        <div class="w-2/12">
+            <aside class="border-l h-52 fixed p-2"></aside>
+            <div
+                class="flex absolute -translate-x-20 translate-y-52  bg-white  w-min flex-col justify-between p-6 border shadow-lg">
+                <h3 class="font-alton text-center" style="font-weight: 600!important; letter-spacing: 1px; ">Abonnement
+                </h3>
+                <p class="text-sm ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
+                    exercitationem voluptas quam veniam
+                </p>
+
+                <a href="" class="btn-primary w-max mx-auto mb-1 text-center mt-3">Consulter</a>
+            </div>
+        </div>
+    </main>
+    <footer class="flex w-full mt-10 bg-primary " data-role="footer">
+        <div class="p-6 pb-0 mx-auto text-white md:w-full lg:w-4/5 bg-primary">
+            <div class="flex flex-wrap mx-auto my-auto">
+                <div class="flex flex-col p-4 mx-auto md:w-1/3 lg:w-1/4">
+                    <img src="../../img/logo_blanc.png" class="my-3 sm:mx-auto lg:w-3/4" alt="">
+
+                    <div data-aos="fade-right" data-aos-delay="900">Au service des particuliers et professionnels de
+                        l'immobilier.</div>
+                    <div class="justify-around hidden p-4 my-4 text-3xl lg:flex justify-self-center">
+                        <a href="http://facebook.com" target="_blank" rel="noopener noreferrer">
+
+                            <i class=" fa fa-facebook"></i>
+                        </a>
+                        <a href="http://instagram.com" target="_blank" rel="noopener noreferrer">
+
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="http://twitter.com" target="_blank" rel="noopener noreferrer">
+
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer">
+
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-around pt-3 sm:w-full mx-auto lg:w-3/4">
+                    <div class="flex flex-col aos-item  max-sm:w-1/2 max-sm:mt-4 mx-auto  " data-aos="fade-right"
+                        data-aos-duration="600">
+                        <h5 class="text-lg font-extrabold font-alton">Pages</h5>
+                        <a class="indicator" href="">Accueil
+                            <hr>
+                        </a>
+                        <a class="indicator" href="">A propos
+                            <hr>
+                        </a>
+                        <a class="indicator" href="">Blog
+                            <hr>
+                        </a>
+                        <a class="indicator" href="">Contact
+                            <hr>
+                        </a>
+                    </div>
+                    <div class="flex flex-col aos-item max-sm:w-1/2 max-sm:mt-4 mx-auto " data-aos="fade-right"
+                        data-aos-duration="600" data-aos-delay="200">
+                        <h5 class="text-lg font-extrabold font-alton">Liens</h5>
+                        <a class="indicator" href="">FAQs
+                            <hr>
+                        </a>
+                        <a class="indicator" href="">Nos Conseils
+                            <hr>
+                        </a>
+                        <a class="indicator" href="">Devenir Partenaire
+                            <hr>
+                        </a>
+                        <a class="indicator" href="">Nous Recrutons
+                            <hr>
+                        </a>
+                    </div>
+                    <div class="flex flex-col aos-item max-sm:w-1/2 max-sm:mt-4 mx-auto " data-aos="fade-right"
+                        data-aos-duration="600" data-aos-delay="400">
+                        <h5 class="text-lg font-extrabold font-alton">Légal</h5>
+                        <a class="indicator" href="">CGUV
+                            <hr>
+                        </a>
+                        <a class="indicator" href="">Confidentialité
+                            <hr>
+                        </a>
+                        <a class="indicator" href="">Cookies
+                            <hr>
+                        </a>
+                        <a class="indicator" href="">Mentions Légales
+                            <hr>
+                        </a>
+                    </div>
+                    <div class="flex flex-col aos-item max-sm:w-1/2 max-sm:mt-4 mx-auto " data-aos="fade-right"
+                        data-aos-duration="600" data-aos-delay="600">
+                        <div>
+                            <h5 class="text-lg font-extrabold font-alton">Aide</h5>
+                            <a class="indicator" href="mailto:contact@simplimmo.fr">contact@simplimmo.fr
+                                <hr>
+                            </a>
+                            <a class="indicator" href="tel:+33000000000">+33 0 00 00 00 00
+                                <hr>
+                            </a>
+                        </div>
+                        <div>
+                            <h5 class="mt-3 text-lg font-extrabold font-alton">Addresse</h5>
+                            <div>7500 Paris, Fr</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="flex justify-center p-2 mx-auto w-full justify-self-center lg:hidden">
+                <div class="justify-between p-4 space-x-auto w-1/2 my-4  mx-auto text-3xl flex justify-self-center">
+                    <a href="http://facebook.com" target="_blank" rel="noopener noreferrer">
+
+                        <i class=" fa fa-facebook"></i>
+                    </a>
+                    <a href="http://instagram.com" target="_blank" rel="noopener noreferrer">
+
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a href="http://twitter.com" target="_blank" rel="noopener noreferrer">
+
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer">
+
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="w-full p-2">
+                <span class="float-right text-right">Copyright &copy; <a href="">Simpl Immo </a>Tous droits
+                    réservés.</span>
+            </div>
+        </div>
+    </footer>
+    <!-- <script type="module" src="../js/index.js"></script> -->
+    <script src="/dist/aos/aos.js"></script>
+    <script>
+        AOS.init({
+            easing: 'ease-in-out-sine'
+        });
+    </script>
+</body>
+
+</html>

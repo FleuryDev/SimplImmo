@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-primary {
+  @apply p-1 px-3 text-white rounded shadow shadow-blue-300;
+  background-color: var(--primary);
+  font-family: 'Louis George Cafe';
+  transition: all 300ms linear
+}
+
+.immo-card {
+  @apply flex flex-col justify-between p-3 my-7 text-center shadow-lg md:w-2/5 lg:w-1/4 justify-self-center rounded-2xl shadow-blue-300;
+}
+
+nav ul li {
+  @apply p-2 text-xl transition-all duration-300 hover:transition-all hover:rounded-r-full hover:duration-300 hover:translate-x-1 hover:bg-blue-200;
+}
+
+nav ul li.active {
+  @apply rounded-r-full border-r border-t border-b shadow-sm bg-blue-200;
+}
+
+.btn-primary:hover {
+  transition: all 300ms linear;
+  color: var(--primary);
+  background-color: white;
+  border: 1px solid var(--primary);
+
+}
