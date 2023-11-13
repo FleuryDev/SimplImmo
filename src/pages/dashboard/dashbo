@@ -216,7 +216,7 @@
         </div>
     </footer>
     <!-- <script type="module" src="../js/index.js"></script> -->
-    <script src="/dist/aos/aos.js"></script>
+     <script src="../../dist/aos/aos.js"></script>
     <script>
         AOS.init({
             easing: 'ease-in-out-sine'
