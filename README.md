@@ -1,3 +1,3 @@
 # SimplImmo
 
-https://fleurydev.github.io/SimplImmo/pages/index.html
+https://fleurydev.github.io/SimplImmo/src/pages/index.html
