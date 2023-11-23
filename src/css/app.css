@@ -13,12 +13,59 @@
   @apply flex flex-col justify-between p-3 my-7 text-center shadow-lg md:w-2/5 lg:w-1/4 justify-self-center rounded-2xl shadow-blue-300;
 }
 
+.mobile-nav ul li,
 nav ul li {
   @apply p-2 text-xl transition-all duration-300 hover:transition-all hover:rounded-r-full hover:duration-300 hover:translate-x-1 hover:bg-blue-200;
 }
 
+.mobile-nav ul li.active,
 nav ul li.active {
-  @apply rounded-r-full border-r border-t border-b shadow-sm bg-blue-200;
+  @apply rounded-r-full border-r border-t border-b shadow-sm bg-[var(--primary)];
+}
+
+.mobile-nav ul li.active a,
+nav ul li.active a {
+  @apply text-white;
+}
+
+.mobile-nav ul li.active a svg,
+nav ul li.active a svg {
+  @apply fill-white;
+}
+
+.doc-w {
+  width: 30% !important;
+  background: #000;
+}
+
+.box {
+  /*     margin: -1.5rem; */
+  border-radius: 12px !important;
+  box-shadow: 0px 3px 10px 0px var(--secondary);
+  @apply flex flex-col h-max p-6 mx-auto rounded;
+  /* box-shadow: 0px 0px 2rem 0px #888888;
+  background-color: white; */
+
+  /* transition: 1s all; */
+}
+
+.mobile-nav ul li a,
+nav ul li a {
+  @apply flex space-x-1 text-gray-900;
+}
+
+.mobile-nav ul li a svg,
+nav ul li a svg {
+  @apply w-8 h-8 fill-current;
+}
+
+.mobile-nav ul li a span,
+nav ul li a span {
+  @apply my-auto;
+}
+
+.nav-active {
+  @apply transition-all duration-300 left-0;
 }
 
 .btn-primary:hover {

@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SimplImmo/Mes Factures</title>
+    <link rel="stylesheet" href="../../../dist/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../../dist/aos/aos.css">
+    <link rel="stylesheet" href="../../../dist/main.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" href="../../../img/logo.png" style="width: 500%;" type="image/x-icon">
+    <link rel="stylesheet" href="../../fonts/font-awesome/css/font-awesome.css">
+
+    <!-- <link rel="stylesheet" href="/node_modules/boxicons/css/boxicons.min.css"> -->
+</head>
+
+<body class="">
+    <div data-role="header" class="sticky top-0 z-50 w-full h-24 bg-white md:px-6">
+        <div class="flex justify-between w-full p-2 mx-auto bg-white shadow lg:w-4/5 ">
+            <div class="flex justify-between w-full border rounded div-first border-gray-50">
+
+                <a href=""><img src="/img/logo.png" class="md:w-44 sm:w-60" alt=""></a>
+                <div class="justify-between hidden w-auto my-auto immo-link md:flex">
+                    <a href="../index.html" class="p-2 "> Accueil
+                        <hr>
+                    </a>
+                    <a href="../about.html" class="p-2 ">A propos
+                        <hr>
+                    </a>
+                    <a href="../blog.html" class="p-2 ">Blog
+                        <hr>
+                    </a>
+                    <a href="../contact.html" class="p-2">Contact
+                        <hr>
+                    </a>
+                </div>
+                <div class="justify-between hidden my-auto mr-4 md:flex">
+                    <a href="login.html" class="my-auto mr-6 "> <i class="fa fa-bell fa-lg"></i> <span
+                            class="absolute p-1 -ml-2 text-xs text-red-600 bg-white border border-blue-300 rounded-full top-3 text-primry">9+</span></a>
+                    <div
+                        class="flex flex-col justify-center p-2 my-auto mr-3 text-sm align-middle justify-items-center">
+
+                        <a href="profile.html" class="mx-auto"><img src="../../../img/img2.png"
+                                class="w-8 h-8 rounded-full" alt=""></a>
+                        <span>David</span>
+                    </div>
+                </div>
+                <button data-state="false"
+                    class="p-2 my-auto mr-3 transition-all nav-menu w-max h-max btn-primary md:hidden">
+                    <svg class="fill-current w-7 h-7" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path
+                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                    </svg></button>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="main" class="flex ">
+        <div class="sticky flex-col justify-between hidden top-24 md:flex h-max lg:w-1/6">
+
+            <nav class="bg-white border-r ">
+                <ul>
+                    <li class="">
+                        <a class="flex text-start " href="profile.html">
+                            <svg class="w-8 h-8 fill-current" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512">
+                                <path
+                                    d="M272 304h-96C78.8 304 0 382.8 0 480c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32C448 382.8 369.2 304 272 304zM48.99 464C56.89 400.9 110.8 352 176 352h96c65.16 0 119.1 48.95 127 112H48.99zM224 256c70.69 0 128-57.31 128-128c0-70.69-57.31-128-128-128S96 57.31 96 128C96 198.7 153.3 256 224 256zM224 48c44.11 0 80 35.89 80 80c0 44.11-35.89 80-80 80S144 172.1 144 128C144 83.89 179.9 48 224 48z" />
+                            </svg>
+                            <span class="max-lg:hidden">Profil</span></a>
+                    </li>
+                    <li class="p-2 text-xl"><a href="tableau-de-bord.html">
+
+                            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path
+                                    d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM288 96c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32zM256 416c35.3 0 64-28.7 64-64c0-17.4-6.9-33.1-18.1-44.6L366 161.7c5.3-12.1-.2-26.3-12.3-31.6s-26.3 .2-31.6 12.3L257.9 288c-.6 0-1.3 0-1.9 0c-35.3 0-64 28.7-64 64s28.7 64 64 64zM176 144c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32zM96 288c17.7 0 32-14.3 32-32s-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32zm352-32c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32z" />
+                            </svg>
+                            <span class="max-lg:hidden">Tableau de bord</span> </a></li>
+                    <li class="p-2 text-xl"><a href="parcours.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path
+                                    d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+                            </svg><span class="max-lg:hidden">Parcours d'achat</span></a></li>
+                    <li class="p-2 text-xl"><a href="documents.html">
+                            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                <path
+                                    d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM112 256H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z" />
+                            </svg><span class="max-lg:hidden">Documents</span></a></li>
+                    <li class="p-2 text-xl active"><a href="factures.html"> <svg fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                <path
+                                    d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM64 80c0-8.8 7.2-16 16-16h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16zm0 64c0-8.8 7.2-16 16-16h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16zm128 72c8.8 0 16 7.2 16 16v17.3c8.5 1.2 16.7 3.1 24.1 5.1c8.5 2.3 13.6 11 11.3 19.6s-11 13.6-19.6 11.3c-11.1-3-22-5.2-32.1-5.3c-8.4-.1-17.4 1.8-23.6 5.5c-5.7 3.4-8.1 7.3-8.1 12.8c0 3.7 1.3 6.5 7.3 10.1c6.9 4.1 16.6 7.1 29.2 10.9l.5 .1 0 0 0 0c11.3 3.4 25.3 7.6 36.3 14.6c12.1 7.6 22.4 19.7 22.7 38.2c.3 19.3-9.6 33.3-22.9 41.6c-7.7 4.8-16.4 7.6-25.1 9.1V440c0 8.8-7.2 16-16 16s-16-7.2-16-16V422.2c-11.2-2.1-21.7-5.7-30.9-8.9l0 0c-2.1-.7-4.2-1.4-6.2-2.1c-8.4-2.8-12.9-11.9-10.1-20.2s11.9-12.9 20.2-10.1c2.5 .8 4.8 1.6 7.1 2.4l0 0 0 0 0 0c13.6 4.6 24.6 8.4 36.3 8.7c9.1 .3 17.9-1.7 23.7-5.3c5.1-3.2 7.9-7.3 7.8-14c-.1-4.6-1.8-7.8-7.7-11.6c-6.8-4.3-16.5-7.4-29-11.2l-1.6-.5 0 0c-11-3.3-24.3-7.3-34.8-13.7c-12-7.2-22.6-18.9-22.7-37.3c-.1-19.4 10.8-32.8 23.8-40.5c7.5-4.4 15.8-7.2 24.1-8.7V232c0-8.8 7.2-16 16-16z" />
+                            </svg><span class="max-lg:hidden">Factures</span></a>
+                    </li>
+                    <li class="p-2 text-xl "><a href="abonnement.html"> <svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 384 512">
+                                <path
+                                    d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM80 64h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16s7.2-16 16-16zm16 96H288c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V256c0-17.7 14.3-32 32-32zm0 32v64H288V256H96zM240 416h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H240c-8.8 0-16-7.2-16-16s7.2-16 16-16z" />
+                            </svg><span class="max-lg:hidden">Abonemment</span></a></li>
+                </ul>
+            </nav>
+
+
+        </div>
+        <div id="mobile-nav"
+            class="fixed z-50 flex flex-col justify-between w-2/3 p-8 space-y-4 md:hidden -left-full mobile-nav top-20 h-max bg-slate-100 shadox-lg rounded-r-xl">
+
+            <div
+                class="flex flex-col justify-center p-2 my-auto mr-3 space-y-4 text-lg text-center align-middle border-b border-gray-300 justify-items-center">
+
+                <a href="profile.html" class="mx-auto"><img src="../../../img/img2.png" class="w-16 h-16 rounded-full"
+                        alt=""></a>
+                <span>David</span>
+            </div>
+            <ul>
+                <li class="">
+                    <a class="flex text-start " href="profile.html">
+                        <svg class="w-8 h-8 fill-current" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512">
+                            <path
+                                d="M272 304h-96C78.8 304 0 382.8 0 480c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32C448 382.8 369.2 304 272 304zM48.99 464C56.89 400.9 110.8 352 176 352h96c65.16 0 119.1 48.95 127 112H48.99zM224 256c70.69 0 128-57.31 128-128c0-70.69-57.31-128-128-128S96 57.31 96 128C96 198.7 153.3 256 224 256zM224 48c44.11 0 80 35.89 80 80c0 44.11-35.89 80-80 80S144 172.1 144 128C144 83.89 179.9 48 224 48z" />
+                        </svg>
+                        <span class="">Profil</span></a>
+                </li>
+                <li class="p-2 text-xl"><a href="tableau-de-bord.html">
+
+                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM288 96c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32zM256 416c35.3 0 64-28.7 64-64c0-17.4-6.9-33.1-18.1-44.6L366 161.7c5.3-12.1-.2-26.3-12.3-31.6s-26.3 .2-31.6 12.3L257.9 288c-.6 0-1.3 0-1.9 0c-35.3 0-64 28.7-64 64s28.7 64 64 64zM176 144c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32zM96 288c17.7 0 32-14.3 32-32s-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32zm352-32c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32z" />
+                        </svg>
+                        <span class="">Tableau de bord</span> </a></li>
+                <li class="p-2 text-xl"><a href="parcours.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path
+                                d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
+                        </svg><span class="">Parcours d'achat</span></a></li>
+                <li class="p-2 text-xl"><a href="documents.html">
+                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path
+                                d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM112 256H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z" />
+                        </svg><span class="">Documents</span></a></li>
+                <li class="p-2 text-xl active"><a href="factures.html"> <svg fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path
+                                d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM64 80c0-8.8 7.2-16 16-16h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16zm0 64c0-8.8 7.2-16 16-16h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16zm128 72c8.8 0 16 7.2 16 16v17.3c8.5 1.2 16.7 3.1 24.1 5.1c8.5 2.3 13.6 11 11.3 19.6s-11 13.6-19.6 11.3c-11.1-3-22-5.2-32.1-5.3c-8.4-.1-17.4 1.8-23.6 5.5c-5.7 3.4-8.1 7.3-8.1 12.8c0 3.7 1.3 6.5 7.3 10.1c6.9 4.1 16.6 7.1 29.2 10.9l.5 .1 0 0 0 0c11.3 3.4 25.3 7.6 36.3 14.6c12.1 7.6 22.4 19.7 22.7 38.2c.3 19.3-9.6 33.3-22.9 41.6c-7.7 4.8-16.4 7.6-25.1 9.1V440c0 8.8-7.2 16-16 16s-16-7.2-16-16V422.2c-11.2-2.1-21.7-5.7-30.9-8.9l0 0c-2.1-.7-4.2-1.4-6.2-2.1c-8.4-2.8-12.9-11.9-10.1-20.2s11.9-12.9 20.2-10.1c2.5 .8 4.8 1.6 7.1 2.4l0 0 0 0 0 0c13.6 4.6 24.6 8.4 36.3 8.7c9.1 .3 17.9-1.7 23.7-5.3c5.1-3.2 7.9-7.3 7.8-14c-.1-4.6-1.8-7.8-7.7-11.6c-6.8-4.3-16.5-7.4-29-11.2l-1.6-.5 0 0c-11-3.3-24.3-7.3-34.8-13.7c-12-7.2-22.6-18.9-22.7-37.3c-.1-19.4 10.8-32.8 23.8-40.5c7.5-4.4 15.8-7.2 24.1-8.7V232c0-8.8 7.2-16 16-16z" />
+                        </svg><span class="">Factures</span></a>
+                </li>
+                <li class="p-2 text-xl "><a href="abonnement.html"> <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 384 512">
+                            <path
+                                d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM80 64h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16s7.2-16 16-16zm16 96H288c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V256c0-17.7 14.3-32 32-32zm0 32v64H288V256H96zM240 416h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H240c-8.8 0-16-7.2-16-16s7.2-16 16-16z" />
+                        </svg><span class="">Abonemment</span></a></li>
+            </ul>
+
+            <div class="flex p-2 mx-auto">
+                <a href="#" class="flex"> <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+
+                        <path
+                            d="M160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32H96C43 32 0 75 0 128V384c0 53 43 96 96 96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H96c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32h64zM504.5 273.4c4.8-4.5 7.5-10.8 7.5-17.4s-2.7-12.9-7.5-17.4l-144-136c-7-6.6-17.2-8.4-26-4.6s-14.5 12.5-14.5 22v72H192c-17.7 0-32 14.3-32 32l0 64c0 17.7 14.3 32 32 32H320v72c0 9.6 5.7 18.2 14.5 22s19 2 26-4.6l144-136z" />
+                    </svg><span class="">Déconnexion</span></a>
+            </div>
+        </div>
+        <div class="flex flex-wrap flex-grow lg:w-5/6">
+
+            <section class="flex w-full ">
+                <div class="flex flex-col w-full pl-6 lg:w-10/12 ">
+
+                    <h1 class="text-3xl font-extrabold text-gray-500 font-alton-bold" style="font-weight: 300;">Mes
+                        Factures</h1>
+
+                    <div class="container flex flex-wrap w-full mx-auto justify-self-center">
+
+
+
+                        <div class="container mx-auto bg-white rounded shadow dark:bg-gray-800">
+                            <div
+                                class="flex flex-col items-start justify-end w-11/12 lg:flex-row lg:p-8 lg:items-stretch">
+
+                                <div
+                                    class="flex flex-col items-start justify-end w-full lg:w-2/3 lg:flex-row lg:items-center">
+
+
+                                    <div class="flex items-center lg:ml-6">
+                                        <button
+                                            class="flex items-center h-8 px-5 text-sm text-white transition duration-150 ease-in-out border border-transparent rounded btn-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 ">
+                                            <svg class="w-4 h-4 mx-auto fill-white" xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 512 512">
+                                                <path
+                                                    d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z" />
+                                            </svg>
+                                            Télécharger
+                                            la séléction</button>
+                                        <button
+                                            class="flex p-2 text-red-500 bg-white border border-transparent rounded cursor-pointer dark:bg-gray-700 dark:hover:bg-gray-600 focus:outline-none focus:border-gray-800 focus:shadow-outline-gray"
+                                            aria-label="delete table" role="button">
+                                            <svg class="w-4 h-4 mx-auto my-auto fill-red-600"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                                <path
+                                                    d="M135.2 17.7C140.6 6.8 151.7 0 163.8 0H284.2c12.1 0 23.2 6.8 28.6 17.7L320 32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 96 0 81.7 0 64S14.3 32 32 32h96l7.2-14.3zM32 128H416V448c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V128zm96 64c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm96 0c-8.8 0-16 7.2-16 16V432c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16z" />
+                                            </svg> Supprimer la séléction
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full overflow-x-scroll xl:overflow-x-hidden">
+                                <table class="min-w-full bg-white dark:bg-gray-800">
+                                    <thead>
+                                        <tr class="w-full h-16 py-8 border-b border-gray-300">
+                                            <th
+                                                class="pl-8 text-sm font-normal leading-4 tracking-normal text-left text-gray-600 dark:text-gray-400">
+                                                <input placeholder="check box" type="checkbox"
+                                                    class="relative w-5 h-5 bg-white border border-gray-400 rounded cursor-pointer dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                                                    onclick="checkAll(this)" />
+                                            </th>
+
+                                            <th role="columnheader"
+                                                class="pr-6 text-sm font-normal leading-4 tracking-normal text-left text-gray-600 dark:text-gray-400">
+                                                Sujet</th>
+
+
+                                            <th role="columnheader"
+                                                class="pr-6 text-sm font-normal leading-4 tracking-normal text-center text-gray-600 dark:text-gray-400">
+                                                Date</th>
+                                            <th
+                                                class="pr-6 text-sm font-normal leading-4 tracking-normal text-center text-gray-600 dark:text-gray-400">
+
+                                                Voir
+                                            </th>
+                                            <td role="columnheader"
+                                                class="pr-8 text-sm font-normal leading-4 tracking-normal text-center text-gray-600 dark:text-gray-400">
+                                                Télécharger</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="h-12 border-b-2 border-blue-300">
+                                            <td
+                                                class="pl-8 text-sm leading-4 tracking-normal text-left text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                <input placeholder="check box" type="checkbox"
+                                                    class="relative w-5 h-5 bg-white border border-gray-400 rounded cursor-pointer dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                                                    onclick="tableInteract(this)" />
+                                            </td>
+
+
+                                            <td
+                                                class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                Définition du projet</td>
+
+                                            <td
+                                                class="pr-6 text-sm leading-4 tracking-normal text-center text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                02.03.20</td>
+                                            <td class="pr-6">
+
+                                                <a href="" class="flex">
+                                                    <svg class="w-5 h-5 mx-auto " xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 576 512">
+                                                        <path
+                                                            d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z" />
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                            <td class="relative pr-8 text-center">
+                                                <a href="" class="flex">
+                                                    <svg class="w-5 h-5 mx-auto" xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z" />
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="h-12 border-b-2 border-blue-300">
+                                            <td
+                                                class="pl-8 text-sm leading-4 tracking-normal text-left text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                <input placeholder="check box" type="checkbox"
+                                                    class="relative w-5 h-5 bg-white border border-gray-400 rounded cursor-pointer dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                                                    onclick="tableInteract(this)" />
+                                            </td>
+
+
+                                            <td
+                                                class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                Définition du projet</td>
+
+                                            <td
+                                                class="pr-6 text-sm leading-4 tracking-normal text-center text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                02.03.20</td>
+                                            <td class="pr-6">
+
+                                                <a href="" class="flex">
+                                                    <svg class="w-5 h-5 mx-auto " xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 576 512">
+                                                        <path
+                                                            d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z" />
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                            <td class="relative pr-8 text-center">
+                                                <a href="" class="flex">
+                                                    <svg class="w-5 h-5 mx-auto" xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z" />
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="h-12 border-b-2 border-blue-300">
+                                            <td
+                                                class="pl-8 text-sm leading-4 tracking-normal text-left text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                <input placeholder="check box" type="checkbox"
+                                                    class="relative w-5 h-5 bg-white border border-gray-400 rounded cursor-pointer dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                                                    onclick="tableInteract(this)" />
+                                            </td>
+
+
+                                            <td
+                                                class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                Définition du projet</td>
+
+                                            <td
+                                                class="pr-6 text-sm leading-4 tracking-normal text-center text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                02.03.20</td>
+                                            <td class="pr-6">
+
+                                                <a href="" class="flex">
+                                                    <svg class="w-5 h-5 mx-auto " xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 576 512">
+                                                        <path
+                                                            d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z" />
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                            <td class="relative pr-8 text-center">
+                                                <a href="" class="flex">
+                                                    <svg class="w-5 h-5 mx-auto" xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z" />
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="h-12 border-b-2 border-blue-300">
+                                            <td
+                                                class="pl-8 text-sm leading-4 tracking-normal text-left text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                <input placeholder="check box" type="checkbox"
+                                                    class="relative w-5 h-5 bg-white border border-gray-400 rounded cursor-pointer dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                                                    onclick="tableInteract(this)" />
+                                            </td>
+
+
+                                            <td
+                                                class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                Définition du projet</td>
+
+                                            <td
+                                                class="pr-6 text-sm leading-4 tracking-normal text-center text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                02.03.20</td>
+                                            <td class="pr-6">
+
+                                                <a href="" class="flex">
+                                                    <svg class="w-5 h-5 mx-auto " xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 576 512">
+                                                        <path
+                                                            d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z" />
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                            <td class="relative pr-8 text-center">
+                                                <a href="" class="flex">
+                                                    <svg class="w-5 h-5 mx-auto" xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z" />
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="h-12 border-b-2 border-blue-300">
+                                            <td
+                                                class="pl-8 text-sm leading-4 tracking-normal text-left text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                <input placeholder="check box" type="checkbox"
+                                                    class="relative w-5 h-5 bg-white border border-gray-400 rounded cursor-pointer dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                                                    onclick="tableInteract(this)" />
+                                            </td>
+
+
+                                            <td
+                                                class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                Définition du projet</td>
+
+                                            <td
+                                                class="pr-6 text-sm leading-4 tracking-normal text-center text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                02.03.20</td>
+                                            <td class="pr-6">
+
+                                                <a href="" class="flex">
+                                                    <svg class="w-5 h-5 mx-auto " xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 576 512">
+                                                        <path
+                                                            d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z" />
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                            <td class="relative pr-8 text-center">
+                                                <a href="" class="flex">
+                                                    <svg class="w-5 h-5 mx-auto" xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z" />
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="h-12 border-b-2 border-blue-300">
+                                            <td
+                                                class="pl-8 text-sm leading-4 tracking-normal text-left text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                <input placeholder="check box" type="checkbox"
+                                                    class="relative w-5 h-5 bg-white border border-gray-400 rounded cursor-pointer dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                                                    onclick="tableInteract(this)" />
+                                            </td>
+
+
+                                            <td
+                                                class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                Définition du projet</td>
+
+                                            <td
+                                                class="pr-6 text-sm leading-4 tracking-normal text-center text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                02.03.20</td>
+                                            <td class="pr-6">
+
+                                                <a href="" class="flex">
+                                                    <svg class="w-5 h-5 mx-auto " xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 576 512">
+                                                        <path
+                                                            d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z" />
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                            <td class="relative pr-8 text-center">
+                                                <a href="" class="flex">
+                                                    <svg class="w-5 h-5 mx-auto" xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z" />
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="h-12 border-b-2 border-blue-300">
+                                            <td
+                                                class="pl-8 text-sm leading-4 tracking-normal text-left text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                <input placeholder="check box" type="checkbox"
+                                                    class="relative w-5 h-5 bg-white border border-gray-400 rounded cursor-pointer dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                                                    onclick="tableInteract(this)" />
+                                            </td>
+
+
+                                            <td
+                                                class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                Définition du projet</td>
+
+                                            <td
+                                                class="pr-6 text-sm leading-4 tracking-normal text-center text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                02.03.20</td>
+                                            <td class="pr-6">
+
+                                                <a href="" class="flex">
+                                                    <svg class="w-5 h-5 mx-auto " xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 576 512">
+                                                        <path
+                                                            d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z" />
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                            <td class="relative pr-8 text-center">
+                                                <a href="" class="flex">
+                                                    <svg class="w-5 h-5 mx-auto" xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z" />
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="h-12 border-b-2 border-blue-300">
+                                            <td
+                                                class="pl-8 text-sm leading-4 tracking-normal text-left text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                <input placeholder="check box" type="checkbox"
+                                                    class="relative w-5 h-5 bg-white border border-gray-400 rounded cursor-pointer dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                                                    onclick="tableInteract(this)" />
+                                            </td>
+
+
+                                            <td
+                                                class="pr-6 text-sm leading-4 tracking-normal text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                Définition du projet</td>
+
+                                            <td
+                                                class="pr-6 text-sm leading-4 tracking-normal text-center text-gray-800 whitespace-no-wrap dark:text-gray-100">
+                                                02.03.20</td>
+                                            <td class="pr-6">
+
+                                                <a href="" class="flex">
+                                                    <svg class="w-5 h-5 mx-auto " xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 576 512">
+                                                        <path
+                                                            d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z" />
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                            <td class="relative pr-8 text-center">
+                                                <a href="" class="flex">
+                                                    <svg class="w-5 h-5 mx-auto" xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 512 512">
+                                                        <path
+                                                            d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z" />
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <script>
+                            function dropdownFunction(element) {
+
+                                var dropdowns = document.getElementsByClassName("dropdown-content");
+                                var i;
+                                let list = element.parentElement.parentElement.getElementsByClassName("dropdown-content")[0];
+                                for (i = 0; i < dropdowns.length; i++) {
+                                    dropdowns[i].classList.add("hidden");
+                                }
+                                list.classList.toggle("hidden");
+                            }
+                            window.onclick = function (event) {
+                                if (!event.target.matches(".dropbtn")) {
+                                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                                    var i;
+                                    for (i = 0; i < dropdowns.length; i++) {
+                                        var openDropdown = dropdowns[i];
+                                        openDropdown.classList.add("hidden");
+                                    }
+                                }
+                            };
+                            function checkAll(element) {
+                                let rows = element.parentElement.parentElement.parentElement.nextElementSibling.children;
+                                for (var i = 0; i < rows.length; i++) {
+                                    if (element.checked) {
+                                        rows[i].classList.add("bg-gray-100");
+                                        rows[i].classList.add("dark:bg-gray-700");
+                                        let checkbox = rows[i].getElementsByTagName("input")[0];
+                                        if (checkbox) {
+                                            checkbox.checked = true;
+                                        }
+                                    } else {
+                                        rows[i].classList.remove("bg-gray-100");
+                                        rows[i].classList.remove("dark:bg-gray-700");
+                                        let checkbox = rows[i].getElementsByTagName("input")[0];
+                                        if (checkbox) {
+                                            checkbox.checked = false;
+                                        }
+                                    }
+                                }
+                            }
+                            function tableInteract(element) {
+                                var single = element.parentElement.parentElement;
+                                single.classList.toggle("bg-gray-100");
+                                single.classList.toggle("dark:bg-gray-700");
+                            }
+                            let temp = 0;
+                            function pageView(val) {
+                                let text = document.getElementById("page-view");
+                                if (val) {
+                                    if (temp === 2) {
+                                        temp = 0;
+                                    } else {
+                                        temp = temp + 1;
+                                    }
+                                } else if (temp !== 0) {
+                                    temp = temp - 1;
+                                }
+                                switch (temp) {
+                                    case 0:
+                                        text.innerHTML = "Viewing 1 - 20 of 60";
+                                        break;
+                                    case 1:
+                                        text.innerHTML = "Viewing 21 - 40 of 60";
+                                        break;
+                                    case 2:
+                                        text.innerHTML = "Viewing 41 - 60 of 60";
+                                    default:
+                                }
+                            }
+                        </script>
+
+
+                    </div>
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </div>
+    <footer class="flex w-full mt-10 bg-primary" data-role="footer">
+        <div class="z-50 flex flex-wrap w-full bg-primary">
+            <div class="z-50 p-6 pb-0 mx-auto text-white md:w-full lg:w-4/5 bg-primary">
+                <div class="flex flex-wrap mx-auto my-auto">
+                    <div class="flex flex-col p-4 mx-auto md:w-1/3 lg:w-1/4">
+                        <img src="../../../img/logo_blanc.png" class="my-3 sm:mx-auto lg:w-3/4" alt="">
+
+                        <div data-aos="fade-right" data-aos-delay="900">Au service des particuliers et professionnels de
+                            l'immobilier.</div>
+                        <div class="justify-around hidden p-4 my-4 text-3xl lg:flex justify-self-center">
+                            <a href="http://facebook.com" target="_blank" rel="noopener noreferrer">
+
+                                <i class=" fa fa-facebook"></i>
+                            </a>
+                            <a href="http://instagram.com" target="_blank" rel="noopener noreferrer">
+
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a href="http://twitter.com" target="_blank" rel="noopener noreferrer">
+
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer">
+
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap justify-around pt-3 mx-auto sm:w-full lg:w-3/4">
+                        <div class="flex flex-col mx-auto aos-item max-sm:w-1/2 max-sm:mt-4 " data-aos="fade-right"
+                            data-aos-duration="600">
+                            <h5 class="text-lg font-extrabold font-alton">Pages</h5>
+                            <a class="indicator" href="">Accueil
+                                <hr>
+                            </a>
+                            <a class="indicator" href="">A propos
+                                <hr>
+                            </a>
+                            <a class="indicator" href="">Blog
+                                <hr>
+                            </a>
+                            <a class="indicator" href="">Contact
+                                <hr>
+                            </a>
+                        </div>
+                        <div class="flex flex-col mx-auto aos-item max-sm:w-1/2 max-sm:mt-4 " data-aos="fade-right"
+                            data-aos-duration="600" data-aos-delay="200">
+                            <h5 class="text-lg font-extrabold font-alton">Liens</h5>
+                            <a class="indicator" href="">FAQs
+                                <hr>
+                            </a>
+                            <a class="indicator" href="">Nos Conseils
+                                <hr>
+                            </a>
+                            <a class="indicator" href="">Devenir Partenaire
+                                <hr>
+                            </a>
+                            <a class="indicator" href="">Nous Recrutons
+                                <hr>
+                            </a>
+                        </div>
+                        <div class="flex flex-col mx-auto aos-item max-sm:w-1/2 max-sm:mt-4 " data-aos="fade-right"
+                            data-aos-duration="600" data-aos-delay="400">
+                            <h5 class="text-lg font-extrabold font-alton">Légal</h5>
+                            <a class="indicator" href="">CGUV
+                                <hr>
+                            </a>
+                            <a class="indicator" href="">Confidentialité
+                                <hr>
+                            </a>
+                            <a class="indicator" href="">Cookies
+                                <hr>
+                            </a>
+                            <a class="indicator" href="">Mentions Légales
+                                <hr>
+                            </a>
+                        </div>
+                        <div class="flex flex-col mx-auto aos-item max-sm:w-1/2 max-sm:mt-4 " data-aos="fade-right"
+                            data-aos-duration="600" data-aos-delay="600">
+                            <div>
+                                <h5 class="text-lg font-extrabold font-alton">Aide</h5>
+                                <a class="indicator" href="mailto:contact@simplimmo.fr">contact@simplimmo.fr
+                                    <hr>
+                                </a>
+                                <a class="indicator" href="tel:+33000000000">+33 0 00 00 00 00
+                                    <hr>
+                                </a>
+                            </div>
+                            <div>
+                                <h5 class="mt-3 text-lg font-extrabold font-alton">Addresse</h5>
+                                <div>7500 Paris, Fr</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex justify-center w-full p-2 mx-auto justify-self-center lg:hidden">
+                    <div class="flex justify-between w-1/2 p-4 mx-auto my-4 text-3xl space-x-auto justify-self-center">
+                        <a href="http://facebook.com" target="_blank" rel="noopener noreferrer">
+
+                            <i class=" fa fa-facebook"></i>
+                        </a>
+                        <a href="http://instagram.com" target="_blank" rel="noopener noreferrer">
+
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="http://twitter.com" target="_blank" rel="noopener noreferrer">
+
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer">
+
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full p-2">
+                    <span class="float-right text-right">Copyright &copy; <a href="">Simpl Immo </a>Tous droits
+                        réservés.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- <script type="module" src="../js/index.js"></script> -->
+    <script src="../../../dist/aos/aos.js"></script>
+    <script src="jquery.min.js"></script>
+    <script>
+        AOS.init({
+            easing: 'ease-in-out-sine'
+        });
+
+        $(document).ready(function () {
+            $('.nav-menu').click(function () {
+                var ab = $(this).data('state');
+                if (!ab) {
+
+                    $('#mobile-nav').removeClass('-left-full')
+                        .addClass('nav-active');
+
+
+                    $(this).html('<svg class= "transition-all duration-100 rotate-45 fill-current w-7 h-7" fill = "currentColor" xmlns = "http://www.w3.org/2000/svg" viewBox = "0 0 512 512" > <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg >')
+                } else {
+                    $('#mobile-nav').addClass('-left-full')
+                        .removeClass('nav-active');
+                    $(this).html('<svg class="fill-current w-7 h-7" fill="currentColor" xmlns="http://www.w3.org/2000/svg"viewBox = "0 0 448 512" ><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" /></svg>')
+
+                }
+                $(this).data('state', !ab);
+            })
+        })
+
+
+    </script>
+</body>
+
+</html>

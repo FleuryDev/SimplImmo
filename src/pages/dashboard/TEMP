@@ -1,0 +1,40 @@
+<section class="flex w-full p-2 ">
+    <div class="container flex flex-col mx-auto">
+
+        <h1 class="my-5 text-3xl font-extrabold text-gray-500 font-alton-bold" s tyle="font-weight: 300;">Mon
+            abonnement</h1>
+
+        <div class="container flex flex-wrap w-full justify-self-center">
+            <p class="w-full text-sm italic text-gray-600">Offre actuellement en cours... </p>
+            <div class="flex flex-col p-3 max-lg:w-full lg:w-1/2">
+                <h2 class="w-full text-2xl font-extrabold text-gray-500 sm:text-lg font-alton-bold">Offre
+                    Prémium</h2>
+                <ul class="pl-5 mt-4 ml-4 space-y-3 list-disc">
+
+                    <li>Lorem ipsum dolor sit amet, consectetur</li>
+                    <li>consectetur adipisicing elit. Distinctio</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, optio.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, optio.</li>
+                </ul>
+            </div>
+            <div
+                class="flex flex-col justify-center p-3 space-y-3 max-lg:border-l-2 max-lg:border-blue-500 max-lg:mt-4 max-lg:w-full max-lg:bg-slate-300 lg:w-1/2">
+                <div>
+
+                    <span class="font-black underline">Date de souscription</span> : 10/02/2024
+                </div>
+                <div>
+
+                    <span class="font-black underline">Date de réabonnement</span> : 10/07/2024
+                </div>
+            </div>
+            <div class="flex flex-wrap w-full mt-4 max-md:space-y-5 max-md:flex-col">
+                <a href="" class="mx-auto text-center btn-primary w-max">Changer d'offre</a>
+                <a href="" class="mx-auto text-center btn-primary w-max">Se désabonner</a>
+            </div>
+
+
+        </div>
+    </div>
+
+</section>
